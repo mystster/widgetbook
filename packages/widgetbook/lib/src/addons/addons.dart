@@ -2,7 +2,7 @@ export 'accessibility_addon/addon.dart';
 export 'alignment_addon/addon.dart';
 export 'builder_addon/addon.dart';
 export 'common/common.dart';
-export 'device_frame_addon/addon.dart';
+export 'device_frame_plus_addon/addon.dart';
 export 'grid_addon/addon.dart';
 export 'inspector_addon/addon.dart';
 export 'localization_addon/addon.dart';

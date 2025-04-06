@@ -1,4 +1,4 @@
-import 'package:device_frame/device_frame.dart';
+import 'package:device_frame_plus/device_frame_plus.dart';
 import 'package:flutter/widgets.dart';
 
 class NoneDevice implements DeviceInfo {
@@ -7,16 +7,19 @@ class NoneDevice implements DeviceInfo {
   static const NoneDevice instance = NoneDevice._();
 
   @override
-  String get name => 'None';
+  $DeviceInfoCopyWith<DeviceInfo> get copyWith => throw UnimplementedError();
 
   @override
-  DeviceIdentifier get identifier => throw UnimplementedError();
+  CustomPainter get framePainter => throw UnimplementedError();
 
   @override
   Size get frameSize => throw UnimplementedError();
 
   @override
-  Size get screenSize => throw UnimplementedError();
+  DeviceIdentifier get identifier => throw UnimplementedError();
+
+  @override
+  String get name => 'None';
 
   @override
   double get pixelRatio => throw UnimplementedError();
@@ -31,8 +34,5 @@ class NoneDevice implements DeviceInfo {
   Path get screenPath => throw UnimplementedError();
 
   @override
-  $DeviceInfoCopyWith<DeviceInfo> get copyWith => throw UnimplementedError();
-
-  @override
-  CustomPainter get framePainter => throw UnimplementedError();
+  Size get screenSize => throw UnimplementedError();
 }

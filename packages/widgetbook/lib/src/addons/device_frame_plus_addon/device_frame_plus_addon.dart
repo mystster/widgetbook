@@ -1,13 +1,13 @@
-import 'package:device_frame/device_frame.dart';
+import 'package:device_frame_plus/device_frame_plus.dart';
 import 'package:flutter/material.dart';
 
 import '../../fields/fields.dart';
 import '../common/common.dart';
-import 'device_frame_setting.dart';
+import '../device_frame_plus_addon/device_frame_plus_setting.dart';
 import 'none_device.dart';
 
 /// A [WidgetbookAddon] for changing the active device/frame. It's based on
-/// the [`device_frame`](https://pub.dev/packages/device_frame) package.
+/// the [`device_frame_plus`](https://pub.dev/packages/device_frame_plus) package.
 class DeviceFrameAddon extends WidgetbookAddon<DeviceFrameSetting> {
   DeviceFrameAddon({
     required List<DeviceInfo> devices,
@@ -56,15 +56,6 @@ class DeviceFrameAddon extends WidgetbookAddon<DeviceFrameSetting> {
   }
 
   @override
-  DeviceFrameSetting valueFromQueryGroup(Map<String, String> group) {
-    return DeviceFrameSetting(
-      device: valueOf('name', group)!,
-      orientation: valueOf('orientation', group)!,
-      hasFrame: valueOf('frame', group)!,
-    );
-  }
-
-  @override
   Widget buildUseCase(
     BuildContext context,
     Widget child,
@@ -97,6 +88,15 @@ class DeviceFrameAddon extends WidgetbookAddon<DeviceFrameSetting> {
           ),
         ),
       ),
+    );
+  }
+
+  @override
+  DeviceFrameSetting valueFromQueryGroup(Map<String, String> group) {
+    return DeviceFrameSetting(
+      device: valueOf('name', group)!,
+      orientation: valueOf('orientation', group)!,
+      hasFrame: valueOf('frame', group)!,
     );
   }
 }

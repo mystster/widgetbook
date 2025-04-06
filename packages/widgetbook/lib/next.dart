@@ -9,7 +9,7 @@ export 'src/next/addons/base/addon.dart';
 export 'src/next/addons/base/builder_addon.dart';
 export 'src/next/addons/base/mode_addon.dart';
 export 'src/next/addons/cupertino_theme_addon.dart';
-export 'src/next/addons/device_frame_addon.dart';
+export 'src/next/addons/device_frame_plus_addon.dart';
 export 'src/next/addons/grid_addon.dart';
 export 'src/next/addons/inspector_addon.dart';
 export 'src/next/addons/localization_addon.dart';
